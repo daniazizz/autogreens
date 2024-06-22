@@ -3,7 +3,7 @@ from google.oauth2.service_account import Credentials
 from time import sleep
 import random
 from selenium import webdriver
-from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from openpyxl import Workbook
@@ -82,8 +82,8 @@ def init_eos():
     browser_driver_path = BROWSER_DRIVER_PATH  # Adjust the path to your Edge WebDriver
 
     # Initialize the Edge WebDriver
-    service = EdgeService(executable_path=browser_driver_path)
-    driver = webdriver.Edge(service=service)
+    service = ChromeService(executable_path=browser_driver_path)
+    driver = webdriver.Chrome(service=service)
 
 
 
@@ -140,8 +140,8 @@ def init_mc():
     edge_driver_path = BROWSER_DRIVER_PATH  # Adjust the path to your Edge WebDriver
 
     # Initialize the Edge WebDriver
-    service = EdgeService(executable_path=edge_driver_path)
-    driver = webdriver.Edge(service=service)
+    service = ChromeService(executable_path=edge_driver_path)
+    driver = webdriver.Chrome(service=service)
 
 
 
